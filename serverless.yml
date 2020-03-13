@@ -30,14 +30,10 @@ functions:
       - http:
           method: get
           path: hello
-  subscribeAll:
+  subscribe:
     handler: handler.subscribe
     events:
-      - cloudwatchLog: '/aws/lambda/${self:service.name}-${self:provider.stage}-hello'
-  # subscribeFilter:
-  #   handler: handler.subscribe
-  #   events:
-  #     - cloudwatchLog:
-  #         logGroup: '/aws/lambda/${self:service.name}-${self:provider.stage}-hello'
-  #         filter: '{$.userIdentity.type = Root}'
-  
+      - cloudwatchLog:
+          logGroup: '/aws/lambda/${self:service.name}-${self:provider.stage}-hello'
+          filter: 'MYLOG'
+
