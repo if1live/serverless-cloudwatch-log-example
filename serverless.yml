@@ -1,0 +1,43 @@
+service:
+  name: serverless-cloudwatch-log-example
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs12.x
+  memorySize: 128
+
+  apiGateway:
+    minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
+
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          method: get
+          path: hello
+  subscribeAll:
+    handler: handler.subscribe
+    events:
+      - cloudwatchLog: '/aws/lambda/${self:service.name}-${self:provider.stage}-hello'
+  # subscribeFilter:
+  #   handler: handler.subscribe
+  #   events:
+  #     - cloudwatchLog:
+  #         logGroup: '/aws/lambda/${self:service.name}-${self:provider.stage}-hello'
+  #         filter: '{$.userIdentity.type = Root}'
+  
