@@ -5,35 +5,44 @@
 `filter: 'MYLOG'`
 
 ```
-2020-03-13T14:31:58.330Z	b5a64b93-276c-4f1b-912c-ba488cc620ea	INFO	
 {
     "messageType": "DATA_MESSAGE",
-    "owner": "xxxxxx",
+    "owner": "798290317353",
     "logGroup": "/aws/lambda/serverless-cloudwatch-log-example-dev-hello",
-    "logStream": "2020/03/13/[$LATEST]eeb531091a104635967787dccf6d5ddc",
+    "logStream": "2020/03/26/[$LATEST]a16fc6c771a14dceb0f3cc2efbf9aa98",
     "subscriptionFilters": [
-        "serverless-cloudwatch-log-example-dev-SubscribeLogsSubscriptionFilterCloudWatchLog1-xxxxxx"
+        "serverless-cloudwatch-log-example-dev-SubscribeLogsSubscriptionFilterCloudWatchLog1-1OFW2PCXBCRS2"
     ],
     "logEvents": [
         {
-            "id": "35326831613596196757794675170110569719331259181555384322",
-            "timestamp": 1584109916467,
-            "message": "2020-03-13T14:31:56.413Z\t84198568-a5fd-4a24-a569-deda2786a05d\tINFO\t{ foo: 2, bar: 'b', now: 2020-03-13T14:31:56.411Z, ty: 'MYLOG' }\n"
+            "id": "35351288443121634676401659481314491486751287506108940291",
+            "timestamp": 1585206598632,
+            "message": "2020-03-26T07:09:58.632Z\tfcdd3c0f-645e-42e3-a1c9-6c5a88ebcff4\tINFO\t{ foo: 2, bar: 'b', now: 2020-03-26T07:09:58.611Z, ty: 'MYLOG' }\n"
         },
         {
-            "id": "35326831613596196757794675170110569719331259181555384323",
-            "timestamp": 1584109916467,
-            "message": "2020-03-13T14:31:56.414Z\t84198568-a5fd-4a24-a569-deda2786a05d\tINFO\tMYLOG [info] { foo: 3, bar: 'c' }\n"
+            "id": "35351288443523048089975210697862134415658958013216587780",
+            "timestamp": 1585206598650,
+            "message": "2020-03-26T07:09:58.632Z\tfcdd3c0f-645e-42e3-a1c9-6c5a88ebcff4\tINFO\tMYLOG [info] { foo: 3, bar: 'c' }\n"
         },
         {
-            "id": "35326831613596196757794675170110569719331259181555384324",
-            "timestamp": 1584109916467,
-            "message": "2020-03-13T14:31:56.414Z\t84198568-a5fd-4a24-a569-deda2786a05d\tWARN\tMYLOG [warn] { foo: 4, bar: 'd' }\n"
+            "id": "35351288443523048089975210697862134415658958013216587781",
+            "timestamp": 1585206598650,
+            "message": "2020-03-26T07:09:58.650Z\tfcdd3c0f-645e-42e3-a1c9-6c5a88ebcff4\tWARN\tMYLOG [warn] { foo: 4, bar: 'd' }\n"
         },
         {
-            "id": "35326831613596196757794675170110569719331259181555384325",
-            "timestamp": 1584109916467,
-            "message": "2020-03-13T14:31:56.414Z\t84198568-a5fd-4a24-a569-deda2786a05d\tERROR\tMYLOG [error] { foo: 5, bar: 'e' }\n"
+            "id": "35351288443523048089975210697862134415658958013216587782",
+            "timestamp": 1585206598650,
+            "message": "2020-03-26T07:09:58.650Z\tfcdd3c0f-645e-42e3-a1c9-6c5a88ebcff4\tERROR\tMYLOG [error] { foo: 5, bar: 'e' }\n"
+        },
+        {
+            "id": "35351288443523048089975210697862134415658958013216587783",
+            "timestamp": 1585206598650,
+            "message": "2020-03-26T07:09:58.650Z\tfcdd3c0f-645e-42e3-a1c9-6c5a88ebcff4\tINFO\t{\"foo\":6,\"bar\":\"f\",\"now\":\"2020-03-26T07:09:58.611Z\",\"ty\":\"MYLOG\"}\n"
+        },
+        {
+            "id": "35351288443523048089975210697862134415658958013216587784",
+            "timestamp": 1585206598650,
+            "message": "2020-03-26T07:09:58.650Z\tfcdd3c0f-645e-42e3-a1c9-6c5a88ebcff4\tINFO\t{\n  \"foo\": 7,\n  \"bar\": \"g\",\n  \"now\": \"2020-03-26T07:09:58.611Z\",\n  \"ty\": \"MYLOG\"\n}\n"
         }
     ]
 }
