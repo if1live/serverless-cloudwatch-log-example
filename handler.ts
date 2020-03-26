@@ -20,6 +20,8 @@ export const hello: APIGatewayProxyHandler = async (event, _context) => {
   console.log('MYLOG [info]', { foo: 3, bar: 'c' });
   console.warn('MYLOG [warn]', { foo: 4, bar: 'd' });
   console.error('MYLOG [error]', { foo: 5, bar: 'e' });
+  console.log(JSON.stringify({ foo: 6, bar: 'f', now, ty: 'MYLOG' }));
+  console.log(JSON.stringify({ foo: 7, bar: 'g', now, ty: 'MYLOG' }, null, 2));
 
   return {
     statusCode: 200,
