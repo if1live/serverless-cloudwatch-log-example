@@ -9,6 +9,14 @@ import * as zlib from 'zlib';
 
 const gunzip = promisify(zlib.gunzip);
 
+export const foo: APIGatewayProxyHandler = async (event, _context) => {
+  return await hello(event, _context);
+};
+
+export const bar: APIGatewayProxyHandler = async (event, _context) => {
+  return await hello(event, _context);
+};
+
 export const hello: APIGatewayProxyHandler = async (event, _context) => {
   const now = new Date();
 

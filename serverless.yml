@@ -24,16 +24,25 @@ provider:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
 
 functions:
-  hello:
-    handler: handler.hello
+  foo:
+    handler: handler.foo
     events:
       - http:
           method: get
-          path: hello
+          path: foo
+  bar:
+    handler: handler.bar
+    events:
+      - http:
+          method: get
+          path: bar
   subscribe:
     handler: handler.subscribe
     events:
       - cloudwatchLog:
-          logGroup: '/aws/lambda/${self:service.name}-${self:provider.stage}-hello'
+          logGroup: '/aws/lambda/${self:service.name}-${self:provider.stage}-foo'
+          filter: 'MYLOG'
+      - cloudwatchLog:
+          logGroup: '/aws/lambda/${self:service.name}-${self:provider.stage}-bar'
           filter: 'MYLOG'
 
