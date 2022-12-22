@@ -13,7 +13,7 @@
     "@types/aws-lambda": "^8.10.46",
     "@types/node": "^13.9.1",
     "fork-ts-checker-webpack-plugin": "^4.1.0",
-    "serverless-offline": "^6.0.0-alpha.67",
+    "serverless-offline": "^12.0.3",
     "serverless-webpack": "^5.3.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3",
